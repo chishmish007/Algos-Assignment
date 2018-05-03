@@ -9,13 +9,13 @@ def initialize(process,totalProcess):
 	
 def print_process(process,totalProcess):
 	totalBurst=0
-	print 'PName\tA.T\tB.T'
+	print ("PName\tA.T\tB.T")
 	index=0
 	for index in xrange(int(totalProcess)):
         	print process[index][0] ,'\t',process[index][1],'\t',process[index][2]
         	totalBurst+=process[index][2]
 	
-	print "total time is>>  ",totalBurst
+	print ("total time is>>  ",totalBurst)
 
 
 def sorting(process):
