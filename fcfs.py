@@ -1,21 +1,21 @@
-def initialize(process,total_process):
+def initialize(process,totalProcess):
 	index=0	
-	for index in xrange(int(total_process)):
+	for index in xrange(int(totalProcess)):
 		process.append([])
 		process[index].append(raw_input("Enter Name of process:"))
-		process[index].append(int(raw_input("Arrival Time:")))
-		process[index].append(int(raw_input("burst time:")))
+		process[index].append(int(raw_input("Arrival Time(A.T)")))
+		process[index].append(int(raw_input("Burst Time(B.T)")))
 
 	
-def print_process(process,total_process):
-	total_burst=0
-	print 'PName\tA. Time\tB.Time'
+def print_process(process,totalProcess):
+	totalBurst=0
+	print 'PName\tA.T\tB.T'
 	index=0
-	for index in xrange(int(total_process)):
+	for index in xrange(int(totalProcess)):
         	print process[index][0] ,'\t',process[index][1],'\t',process[index][2]
-        	total_burst+=process[index][2]
+        	totalBurst+=process[index][2]
 	
-	print "Total Time : ",total_burst
+	print "total time is>>  ",totalBurst
 
 
 def sorting(process):
@@ -25,9 +25,9 @@ def sorting(process):
 
 
 process=[]
-total_process=0
-total_process=raw_input("Enter total number of processes:")
-initialize(process,total_process)
+totalProcess=0
+totalProcess=raw_input("enter>> total no of process:")
+initialize(process,totalProcess)
 sorting(process)
-print_process(process,total_process)
+print_process(process,totalProcess)
 
